@@ -38,7 +38,7 @@ function Time(props) {
         divRef.current.focus();
         try {
             const word = await getdat(props.words);
-            await setLeft(makeString(word));
+            await setLeft(makeString(word, props.numbers, props.punctuation));
         } catch (error) {
             console.log(error);
         }

@@ -39,7 +39,7 @@ function Words(props) {
         divRef.current.focus();
         try {
             const word = await getdat(props.words);
-            await setLeft(makeString(word));
+            await setLeft(makeString(word, props.numbers, props.punctuation));
         } catch (error) {
             console.log(error);
         }
@@ -76,7 +76,7 @@ function Words(props) {
         SetWorking(false);
         Setdatapoints([]);
         intial();
-    }, [props.words]);
+    }, [props.words, props.numbers, props.punctuation]);
     return (
         test == false ? <div
             style={{ outline: "none" }}

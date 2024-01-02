@@ -6,6 +6,8 @@ function App() {
   const [mode, setMode] = useState('words');
   const [word, setwords] = useState(10);
   const [time, setTime] = useState(15);
+  const [punctuation, setpun] = useState(false);
+  const [numbers, setnumbers] = useState(false);
   function changeWords(words) {
     setwords(words);
   }
@@ -18,11 +20,13 @@ function App() {
   return mode == 'words' ? <div>
     <h1 onClick={() => changeMode("words")}>Words</h1>
     <h1 onClick={() => changeMode("Time")}> Time</h1>
+    <h1 onClick={() => setpun((prev) => !prev)}>punctuation</h1>
+    <h1 onClick={() => setnumbers((prev) => !prev)}>numbers</h1>
     <h1 onClick={() => changeWords(10)}>10</h1>
     <h1 onClick={() => changeWords(15)}>20</h1>
     <h1 onClick={() => changeWords(20)}>25</h1>
     <h1 onClick={() => changeWords(50)}>50</h1>
-    <Words words={word} /></div>
+    <Words numbers={numbers} punctuation={punctuation} words={word} /></div>
     : <div>
       <h1 onClick={() => changeMode("words")}>Words</h1>
       <h1 onClick={() => changeMode("Time")}> Time</h1>
@@ -30,7 +34,7 @@ function App() {
       <h1 onClick={() => changeTime(30)}>30</h1>
       <h1 onClick={() => changeTime(45)}>45</h1>
       <h1 onClick={() => changeTime(60)}>60</h1>
-      <Time words={time * (250 / 60)} time={time} /></div>
+      <Time numbers={numbers} punctuation={punctuation} words={time * (250 / 60)} time={time} /></div>
 }
 
 export default App;
