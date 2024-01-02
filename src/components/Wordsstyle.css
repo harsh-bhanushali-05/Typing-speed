@@ -1,0 +1,39 @@
+.left{
+    position: relative;
+    display: inline;
+    color: gray;
+    margin: 0;
+    padding: 0;
+    ;
+}
+.right{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    color: black;
+    left: 2px;
+}
+
+.fade-in-out {
+    animation: fade-in-out 1s linear infinite; 
+  }
+  
+  @keyframes fade-in-out {
+    0% { opacity: 0; } 
+    50% { opacity: 1; } 
+    100% { opacity: 0; } 
+  }
+  .cursor-line {
+    position: relative;
+    left: 2px;
+    z-index: 1;
+}
+
+.cursor-line{
+     font-weight: 100;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    color: blue;
+}
