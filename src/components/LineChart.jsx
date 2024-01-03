@@ -6,7 +6,9 @@ function LineChart(props) {
         labels: props.data.map((data) => data.time),
         datasets: [{
             label: "WPM",
-            data: props.data.map((data) => data.wordsPerSecond)
+            data: props.data.map((data) => data.wordsPerSecond),
+            backgroundColor: "#FFD07B",
+            borderColor: "#FFD07B",
         }]
     });
     console.log(props.data);
@@ -14,6 +16,4 @@ function LineChart(props) {
         <Line data={dat} />
     );
 }
-
 export default LineChart;
-

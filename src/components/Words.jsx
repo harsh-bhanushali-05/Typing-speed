@@ -23,6 +23,7 @@ function Words(props) {
                 SetTime(0);
                 SetWorking(false);
                 Setdatapoints([]);
+                tab = 0;
                 intial();
             }
             divRef.current.focus();
@@ -49,7 +50,7 @@ function Words(props) {
             setTimeout(() => {
                 SetTime((prev) => Math.round((prev + .1) * 100) / 100);
                 console.log("I am working ");
-                Setdatapoints((prev) => [...prev, { time: time, wordsPerSecond: Math.round((done.length / ((done.length + left.length) / props.words)) * 600 / time) / 10 }]);
+                Setdatapoints((prev) => [...prev, { time: time + ' S', wordsPerSecond: Math.round((done.length / ((done.length + left.length) / props.words)) * 600 / time) / 10 }]);
             }, 100);
         }
     }, [time, working]);
@@ -81,6 +82,7 @@ function Words(props) {
         test == false ? <div
             style={{ outline: "none" }}
             ref={divRef}
+            className="marg"
             tabIndex="0"
             onKeyDown={handleKeypress}
         >
@@ -93,6 +95,7 @@ function Words(props) {
         </div> : <div
             style={{ outline: "none" }}
             ref={divRef}
+            className="marg-graph"
             tabIndex="0"
             onKeyDown={handleKeypress}
         ><Result time={time} words={props.words} data={datapoints} /></div>

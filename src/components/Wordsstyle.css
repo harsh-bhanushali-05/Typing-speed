@@ -1,7 +1,7 @@
 .left{
     position: relative;
     display: inline;
-    color: #312F2F;
+    color: #A6D9F7;
     margin: 0;
     padding: 0;
     ;
@@ -11,10 +11,19 @@
     margin: 0;
     padding: 0;
     display: inline;
-    color: #22181C;
+    color: #FBDF07;
     left: 2px;
 }
-
+.marg{
+  max-width: 80%;
+  margin: 8% auto 0 auto;
+  text-align: center;
+}
+.marg-graph{
+  max-width: 80%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
 .fade-in-out {
     animation: fade-in-out 1s linear infinite; 
   }
@@ -35,7 +44,7 @@
     margin: 0;
     padding: 0;
     display: inline;
-    color: blue;
+    color: #D67AB1;
 }
 .text{
   display: flex;
