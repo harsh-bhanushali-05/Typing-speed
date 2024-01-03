@@ -1,3 +1,4 @@
+import "./Wordsstyle.css";
 import getdat from "./getdat";
 import makeString from "./makeString";
 import Result from "./Result";
@@ -81,7 +82,7 @@ function Time(props) {
         SetWorking(false);
         Setdatapoints([]);
         intial();
-    }, [props.Time, props.words]);
+    }, [props.Time, props.words, props.numbers, props.punctuation]);
     return (
         test == false ? <div
             style={{ outline: "none" }}

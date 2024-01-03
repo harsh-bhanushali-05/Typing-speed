@@ -10,10 +10,10 @@ function makeString(str, numbers, punctuation) {
         }
         if (punctuation) {
             let p = Math.random();
-            if (p > .9) {
+            if (p > .85) {
                 let arr = [',', ':', '.', ';', '?', '!', '(', ')', '\\'];
                 let put = Math.floor(Math.random() * arr.length);
-                element = element + + " " + arr[put];
+                element = element + " " + arr[put];
             }
         }
         ans += element + " ";

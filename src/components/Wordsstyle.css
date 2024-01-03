@@ -1,7 +1,7 @@
 .left{
     position: relative;
     display: inline;
-    color: gray;
+    color: #312F2F;
     margin: 0;
     padding: 0;
     ;
@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     display: inline;
-    color: black;
+    color: #22181C;
     left: 2px;
 }
 
@@ -36,4 +36,9 @@
     padding: 0;
     display: inline;
     color: blue;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
